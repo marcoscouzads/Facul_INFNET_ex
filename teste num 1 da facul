@@ -1,0 +1,122 @@
+1 - Crie um algoritmo que receba, como entrada, o valor de três notas de um aluno - com valor entre 0 e 10, e, em seguida, informe a média entre elas. 
+Neste momento, não é necessário validar se a nota está dentro do intervalo válido!
+
+2 - Recrie o algoritmo de cálculo de média das notas, mas, desta vez, calcule a média ponderada, sabendo que a primeira nota possui peso 1, a segunda nota possui peso 2 e a terceira nota possui peso 3.
+Sabendo que a média MP é calculada como
+
+MP = 		N1 * P1 + N2 * P2 + N3 * P3
+	       _____________________________
+	
+			(P1 + P2 + P3)
+
+Onde N são as notas e, P, de seus respectivos pesos.
+
+ex 1 e 2 feitos:
+'''
+print("digite o nome do aluno: ")
+nome = str(input("digite aqui: "))
+n1 = int(input("primeira nota: "))
+n2 = int(input("segunda nota: "))
+n3 = int(input("terceira nota: "))
+media_ponderada = ((n1 * 1) + (n2 * 2) + (n3 * 3)) / (1 + 2 + 3)
+media = (n1 + n2 + n3) / 3
+print("as notas do aluno foram: \nnota 1: {}, \nnota 2: {}, \nnota 3: {} \nMedia Ponderada: {:.2f} \nMedia :{:.0f}".format(n1,n2,n3,media_ponderada,media))
+'''
+
+3 - Crie um algoritmo que recebe o valor da altura e do peso de uma pessoa e retorna seu IMC. 
+IMC = peso / altura² 
+
+print("vamo ficar fitness!!!")
+peso = float(input("digite seu peso balofo: "))
+altura = float(input("digite sua altura mané: "))
+imc = peso / altura**2
+if imc < 18.5:
+    print("puro osso!")
+elif imc >= 18.6 < 24.9:
+    print("tu passa! ")
+elif imc >= 25 < 30:
+    print("ta com banha! ")
+elif imc >= 30.1:
+    print ("gordo pra caramba! ")
+
+
+4 - Crie um algoritmo que recebe um valor de temperatura em Celsius e o converte para Fahrenheit. 
+F = (C * 9/5)+32
+
+c = float(input("digite a temperatura em celcius: "))
+f = (c * (9/5)) + 32
+print("temperatura em Fahrenheit é: {:.1f}".format(f))
+
+5 - Um motorista deseja abastecer um valor X em reais, de combustível. Escreva um algoritmo para ler o preço do litro do combustível e o valor que o motorista deseja abastecer. Em seguida, informe quantos litros foram abastecidos.
+
+gas = float(input("qual o preço do combustivel: "))
+reais = float(input("quanto reais vai querer colocar: "))
+total = reais / gas
+print("total de litros será:", total)
+
+6 - Crie um algoritmo para calcular a média de duas notas digitadas pelo usuário, sendo que a segunda nota tem peso dois.
+
+n1 = int(input("diz a primeira nota: "))
+n2 = int(input("diz a segunda nota: "))
+media = ((n1 * 1) + (n2 * 2)) / 2
+print("a media ponderada será: {}".format(media))
+
+7 - Crie um algoritmo que calcule a gorjeta a ser paga de uma conta de restaurante. A gorjeta é calculada como sendo 10% do valor da conta, que deve ser informado pelo usuário.
+
+print("neste restaurante a gorjeta é obrigatória e tem o valor de 10%")
+valor = float(input("o valor da conta é: "))
+gorjeta = valor * 10 /100
+total = valor + gorjeta
+print("a conta é:$ {:.2f} \ngorjeta é:$ {:.2f} \ntotal da nota :{:.2f}".format(valor, gorjeta, total))
+
+8 - Crie um algoritmo que calcule o novo valor de um salário a partir de um valor percentual de reajuste. O valor atual do salário e o valor percentual do reajuste devem ser informados pelo usuário como, por exemplo, 7,3%.
+
+print("reajuste salarial para funcionario dedicado: ")
+atual = float(input("digite seu salário atual: "))
+print("o reajuste será de 15%, prorporcional ao seu tempo de casa. ")
+reajuste = atual * 15 / 100
+novo = atual + reajuste
+print("o seu novo salario será: {:.2f}".format(novo))
+
+9 - Crie um algoritmo que calcule a área de um quadrado, sendo que o comprimento do lado é informado pelo usuário. A área do quadrado é calculada elevando-se o lado ao quadrado.
+
+print("vamos a um pouco de geometria (: ")
+print("digite o tamanho do quadrado. ")
+quad1 = float(input("Horizontal: "))
+quad2 = float(input("vertical: "))
+area_q = quad1 * quad2
+print ("a area de um quandrado é: {:.2f}² ".format(area_q))
+
+10 - Crie um algoritmo que calcule a área de um retângulo, sendo que os comprimentos da altura e da base são informados pelo usuário. A área do retângulo é calculada multiplicando-se a altura pela base.
+
+print("calcular a area de um retangulo")
+ret1 = float(input("base: "))
+ret2 = float(input("altura: "))
+area_r = ret1 * ret2
+print("a area do retangulo é {}²".format(area_r))
+
+
+11 - Crie um algoritmo que calcule a área de um círculo, sendo que o comprimento do raio é informado pelo usuário. A área do círculo é calculada multiplicando-se pi e o raio ao quadrado.
+
+print("calcular a area de um circulo: ")
+raio = float(input("digite o raio do circulo: "))
+area = 3.14 * raio**2
+print("a area do circulo será: {}²".format(area))
+
+12 - Crie um algoritmo que calcule a área de uma esfera, sendo que o comprimento do raio é informado pelo usuário. A área da esfera é calculada multiplicando-se 4 vezes pi e o raio ao quadrado.
+
+print("calcular a area de uma esfera: ")
+raio = float(input("digite o raio da esfera: "))
+area = (4 * 3.14) * raio**2
+print("a area dessa esfera será: {:.2f}³".format(area))
+
+
+13 - Crie um algoritmo que calcule o volume de uma caixa d’água cilíndrica, sendo que os comprimentos do raio e a altura são informados pelo usuário. O volume é calculado multiplicando-se pi, o raio ao quadrado e a altura.
+
+print("calcular o volume de uma caixa d'agua: ")
+raio = float(input("diga o raio: "))
+altura = float(input("diga a altura: "))
+volume = 3.14 * raio**2 * altura
+litro = volume / 1000
+print("o volume cubico será: {}cm³\nLitros será: {:.2f}l".format(volume,litro))
+
