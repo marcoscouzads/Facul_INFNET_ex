@@ -1,0 +1,132 @@
+1 - Crie um algoritmo que leia um número e mostre se o mesmo é positivo, negativo ou zero.
+
+print("ler um numero")
+num = int(input("digite um numero: "))
+if num > 1:
+    print("numero positivo!")
+elif num == 0:
+    print("nulo ou zero!")
+else:
+    print("negativo")
+print("fim do programa!")
+
+
+2 - Crie um algoritmo que leia um número e mostre se o mesmo é par ou ímpar.
+
+print("leia se o num é par ou impar")
+num = int(input("digite um numero: "))
+resto = num % 2
+if resto:
+    print("impar")
+else:
+    print("par")
+print("fim do programa! ")
+print(resto)        #prova verdade do resto
+
+
+3 - Crie um algoritmo que leia dois números e mostre o maior número.
+
+num1 = int(input("digite o primeiro numero: "))
+num2 = int(input("digite o segundo numero: "))
+
+if num1 > num2:
+    print("primeiro numero é maior!!! {}".format(num1))
+elif num1 == num2:
+    print("deu empate")
+else:
+    print("segundo numero é maior!!! {}".format(num2))
+print("fim")
+
+4 - Crie um algoritmo que leia três números e mostre o maior número.
+    a - 👼 Desconsidere a hipótese de números iguais
+    b - 😈 Considere-a, para um problema mais difícil.
+
+num1 = int(input("digite o primeiro numero: "))
+num2 = int(input("digite o segundo numero: "))
+num3 = int(input("digite o terceiro numero: "))
+if num1 > num2 and num1 > num3:
+    print("primeiro numero é maior!!! {}".format(num1))
+elif num1 < num2 and num2 > num3:
+    print("segundo numero é maior!!! {}".format(num2))
+elif num1 < num3 and num2 < num3:
+    print("terceiro numero é maior!!! {}".format(num3))
+else:
+    print("empate!!! {},{},{}".format(num1,num2,num3))
+print("fim")
+
+5 - Crie um algoritmo que leia três números e mostre-os em ordem crescente.
+
+num1 = int(input("digite o primeiro numero: "))
+num2 = int(input("digite o segundo numero: "))
+num3 = int(input("digite o terceiro numero: "))
+lista = [num1,num2,num3]
+lista = sorted(lista)
+print(lista)
+
+
+6 - Crie um algoritmo que leia um caractere e informe se o mesmo é uma vogal ou não.
+
+
+
+7 - Crie um algoritmo que calcule e mostre o novo valor de um salário a partir das seguintes regras: salários de até R$ 1.000,00 inclusive recebem 30% de aumento, 
+salários de até R$ 2.000,00 inclusive recebem 25%, salários de até R$ 3.000,00 inclusive recebem 20%, salários de até R$ 4.000,00 inclusive recebem 15% e 
+salários acima de R$ 4.000,00 recebem 10%. 
+
+print("hora de geral ganhar um aumento de salario!!!")
+print("ATENÇÃO!!! o aumento é proporcional ao salario do funcionario.")
+sal = float(input("digite seu salario: "))
+if sal <= 1000:
+    print("ganha um aumento de 30%!!! ",sal + (sal * 30 /100))
+elif sal > 1000 and sal <= 2000:
+    print("ganha um aumento de 25%!!!", sal + (sal * 25 / 100))
+elif sal > 2000 and sal <= 3000:
+    print("ganha um aumento de 20%!!!", sal + (sal * 20 / 100))
+elif sal > 3000 and sal <= 4000:
+    print("ganha um aumento de 15%!!!", sal + (sal * 15 / 100))
+else:
+    print("ganha um aumento de 10%!!!", sal + (sal * 10 / 100))
+
+print("fim do programa")
+
+8 - Os endereços IP versão 4 são divididos em cinco classes: A, B, C, D e E. Os endereços no intervalo de 0 a 127 são classe A, 
+de 128 a 191 são classe B, de 192 a 223 são classe C, de 224 a 239 são classe D e a partir de 240 são classe E. 
+
+
+
+BONUS - Crie um algoritmo que leia o primeiro octeto, no formato decimal, de um endereço IP e informe a sua classe.
+
+
+
+9 - Crie um algoritmo que receba um número inteiro, que representa um determinado mês do ano, e mostre o nome do mês correspondente. Por exemplo, se for informado o número 2, algoritmo deverá exibir fevereiro. O algoritmo deve validar se a entrada está correta.
+
+
+
+10 - Crie um algoritmo que valide uma data, formada por dia, mês e ano. Por exemplo, a data 30/02 é sempre inválida; mas a data 29/02/2012 é válida.
+
+
+
+11 - [Olimpíada Brasileira de Informática 2018] Basquete de robôs
+A organização da OIBR, Olimpíada Internacional de Basquete de Robô, está começando a ter problemas com dois times: os Bit Warriors e os Byte Bulls. É que os robôs desses times acertam quase todos os lançamentos, de qualquer posição na quadra! Pensando bem, o jogo de basquete ficaria mesmo sem graça se jogadores conseguissem acertar qualquer lançamento, não é mesmo? Uma das medidas que a OIBR está implantando é uma nova pontuação para os lançamentos, de acordo com a distância do robô para o início da quadra. A quadra tem 2000 centímetros de comprimento, como na figura.
+
+Dada a distância D do robô até o início da quadra, onde está a cesta, a regra é a seguinte:
+    Se D ≤ 800, a cesta vale 1 ponto;
+    Se 800 < D ≤ 1400, a cesta vale 2 pontos;
+    Se 1400 < D ≤ 2000, a cesta vale 3 pontos.
+A organização da OIBR precisa de ajuda para automatizar o placar do jogo. Dado o valor da distância D, escreva um programa para calcular o número de pontos do lançamento.
+
+Entrada: A primeira e única linha da entrada contém um inteiro D indicando a distância do robô para o início da quadra, em centímetros, no momento do lançamento.
+
+Saída: Seu programa deve produzir uma única linha, contendo um inteiro, 1, 2 ou 3, indicando a pontuação do lançamento.
+Restrições: 0 ≤ D ≤ 2000
+Exemplos:
+Entrada - saida
+1720    -  3
+250     -  1
+1400    -  2
+
+
+
+
+12 - (Python Brasil) Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário o valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
+  Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+  Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
