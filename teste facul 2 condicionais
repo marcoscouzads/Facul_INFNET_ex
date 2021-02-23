@@ -66,7 +66,28 @@ print(lista)
 
 6 - Crie um algoritmo que leia um caractere e informe se o mesmo é uma vogal ou não.
 
+print("inicio do programa!")
+letra = str(input("digite uma letra: "))
 
+if letra == 'a' or letra == 'A':
+    print("é vogal!")
+    
+elif letra == 'e' or letra == 'E':
+    print("é vogal!")
+    
+elif letra == 'i' or letra == 'I':
+    print("é vogal!")
+
+elif letra == 'o' or letra == 'O':
+    print("é vogal!")
+    
+elif letra == 'u' or letra == 'U':
+    print("é vogal!")
+    
+else:
+    print("não é vogal!")
+    
+print("fim do programa")
 
 7 - Crie um algoritmo que calcule e mostre o novo valor de um salário a partir das seguintes regras: salários de até R$ 1.000,00 inclusive recebem 30% de aumento, 
 salários de até R$ 2.000,00 inclusive recebem 25%, salários de até R$ 3.000,00 inclusive recebem 20%, salários de até R$ 4.000,00 inclusive recebem 15% e 
@@ -90,19 +111,101 @@ print("fim do programa")
 
 8 - Os endereços IP versão 4 são divididos em cinco classes: A, B, C, D e E. Os endereços no intervalo de 0 a 127 são classe A, 
 de 128 a 191 são classe B, de 192 a 223 são classe C, de 224 a 239 são classe D e a partir de 240 são classe E. 
+Crie um algoritmo que leia o primeiro octeto, no formato decimal, de um endereço IP e informe a sua classe.
 
+print("inicio do programa!")
+ip = int(input("digite um endereço Ip: "))
 
+if ip >= 0 and ip <= 127:
+    print("é da classe A!")
+    
+elif ip >= 128 and ip <= 191:
+    print("é da classe B!")
+    
+elif ip >= 192 and ip <= 223:
+    print("é da classe C!")
 
-BONUS - Crie um algoritmo que leia o primeiro octeto, no formato decimal, de um endereço IP e informe a sua classe.
+elif ip >= 224 and ip <= 239:
+    print("é da classe D!")
+    
+elif ip >= 240:
+    print("é da classe E!")
+    
+else:
+    print("não é um ip valido!")
+    
+print("fim do programa")
 
+9 - Crie um algoritmo que receba um número inteiro, que representa um determinado mês do ano, e mostre o nome do mês correspondente. 
+Por exemplo, se for informado o número 2, algoritmo deverá exibir fevereiro. O algoritmo deve validar se a entrada está correta.
 
+print("inicio do programa!")
+mes = int(input("digite um numero do mês: "))
 
-9 - Crie um algoritmo que receba um número inteiro, que representa um determinado mês do ano, e mostre o nome do mês correspondente. Por exemplo, se for informado o número 2, algoritmo deverá exibir fevereiro. O algoritmo deve validar se a entrada está correta.
+if mes == 1:
+    print("Janeiro")
+    
+elif mes == 2:
+    print("Fevereiro")
+    
+elif mes == 3:
+    print("Março")
 
-
+elif mes == 4:
+    print("Abril")
+    
+elif mes == 5:
+    print("Maio")
+    
+elif mes == 6:
+    print("Junho")
+    
+elif mes == 7:
+    print("Julho")
+    
+elif mes == 8:
+    print("Agosto")
+    
+elif mes == 9:
+    print("Setembro")
+    
+elif mes == 10:
+    print("Outubro")
+    
+elif mes == 11:
+    print("Novembro")
+    
+elif mes == 12:
+    print("Dezembro")
+    
+else:
+    print("não é um mês valido!")
+    
+print("fim do programa")
 
 10 - Crie um algoritmo que valide uma data, formada por dia, mês e ano. Por exemplo, a data 30/02 é sempre inválida; mas a data 29/02/2012 é válida.
 
+print("inicio do programa")
+
+dia = int(input("digite o dia: "))
+mes = int(input("digite o mês: "))
+ano = int(input("digite o ano: "))
+
+if mes == 2 and dia > 29:
+    print("data invalido")
+    
+elif dia > 31:
+    print("data invalida")
+    
+elif mes > 12:
+    print("data invalida")
+    
+else:
+    print("mes valido")
+    
+print(f"{dia}/{mes}/{ano}")
+
+print("fim do programa")
 
 
 11 - [Olimpíada Brasileira de Informática 2018] Basquete de robôs
@@ -124,9 +227,61 @@ Entrada - saida
 250     -  1
 1400    -  2
 
+print("inicio do programa")
+D = int(input("distanca da cesta: "))
 
+if D >= 0 and D <= 800:
+    print("Fez 1 ponto!")
+    d = 1
+
+elif D > 800 and D <= 1400:
+    print("Fez 2 pontos!")
+    d = 2
+    
+elif D >1400 and D <= 2000:
+    print("Fez 3 pontos!")
+    d = 3
+    
+else:
+    print("fora da quadra!")
+
+
+print(f"Distancia: {D}cm, Pontuação: {d}")
+
+
+
+print("fim do programa")
 
 
 12 - (Python Brasil) Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário o valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
   Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
   Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+
+
+print("inicio do programa")
+
+print ("o valor minimo para saque é de 10,00 reais e o máximo é de 600,00 reais")
+print("as notas disponiveis são de: 1$, 5$, 10$, 50$ e 100$")
+valor = int(input("digite o valor para saque: "))
+if valor >= 10 and valor <= 600:
+    print("processando pagamento!")
+    cem = valor % 100
+    cin = cem % 50
+    dez = cin % 10
+    ci = dez % 5
+    um = ci % 1
+    
+    n100 = valor // 100
+    n50 = cem // 50
+    n10 = cin // 10
+    n5 = dez // 5
+    n1 = ci // 1
+    
+    print(f" {n100} nota de 100,00 e {n50} nota de 50,00 e {n10} nota de 10,00 e {n5} nota de 5,00 e {n1} nota de 1,00")
+    
+else:
+    print("valor invalido")
+    print("retire-se")
+
+
+print("fim do programa")
